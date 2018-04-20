@@ -88,8 +88,9 @@ public class SynchronousMessageTriggerSunnyDayTests {
 		List<String> list = getMessages();
 		assertEquals(1, list.size());
 		assertTrue(list.contains("foo"));
-
-		int id = 0;
+		  this.logger.debug("------testReceiveMessageUpdateDatabase get message time------"+(System.currentTimeMillis()-this.begintime));
+		this.begintime=System.currentTimeMillis();
+		  int id = 0;
 		for (String name : list) {			
 			jdbcTemplate.update("INSERT INTO T_FOOS (id,name,foo_date) values (?,?,?)", id++, name, new Date());
 		}

@@ -36,20 +36,30 @@
 		<property name="sessionTransacted" value="true" />
 	</bean>
 
+   
 	<bean id="connectionFactory"
 		class="org.springframework.jms.connection.TransactionAwareConnectionFactoryProxy">
 		<property name="targetConnectionFactory">
-			<bean class="org.apache.activemq.ActiveMQConnectionFactory" depends-on="brokerService">
+			<!-- <bean class="org.apache.activemq.ActiveMQConnectionFactory" depends-on="brokerService">
 				<property name="brokerURL" value="vm://localhost"/>
+			</bean> -->
+		   <!-- 真正的连接工厂，由JMS服务厂商提供 -->
+			<bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="tcp://192.168.10.18:61616" />
 			</bean>
+			
 		</property>
 		<property name="synchedLocalTransactionAllowed" value="true" />
 	</bean>
-
+		
+	
+	<!-- Enable this if you need to inspect with JMX -->	
+	<!-- Use the cheapest possible persistence adapter for testing purposes -->
+   <!--  
 	<bean id="brokerService" class="org.apache.activemq.broker.BrokerService"
 		init-method="start" destroy-method="stop">
 		<property name="brokerName" value="broker" />
-		<!-- Enable this if you need to inspect with JMX -->
+		
 		<property name="useJmx" value="false" />
 		<property name="transportConnectorURIs">
 			<list>
@@ -57,9 +67,10 @@
 			</list>
 		</property>
 		<property name="persistenceAdapter">
-			<!-- Use the cheapest possible persistence adapter for testing purposes -->
+			
 			<bean class="org.apache.activemq.store.memory.MemoryPersistenceAdapter"/>
 		</property>
 	</bean>
+	-->
 
 </beans>
