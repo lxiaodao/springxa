@@ -1,0 +1,28 @@
+18-04-06 12:56:48,761 [main] Starting read of logfile E:\stsworkspace\springxa-src\tx-article-export-0\atomikos-db\atomikos\tmlog25.log
+18-04-06 12:56:48,796 [main] Done read of logfile
+18-04-06 12:56:48,808 [main] other-data-source: refreshed XAResource
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.soap_commit_protocols = atomikos,wsat
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.console_file_name = tm.out
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.console_file_count = 1
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.automatic_resource_registration = true
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.client_demarcation = false
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.soap_request_threads = 1
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.threaded_2pc = true
+18-04-06 12:56:48,810 [main] USING com.atomikos.icatch.soap_host_address = 192.168.10.18
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.serial_jta_transactions = true
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.log_base_dir = atomikos
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.console_log_level = WARN
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.max_actives = 50
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.soap_port = 8088
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.checkpoint_interval = 500
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.enable_logging = true
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.output_dir = atomikos
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.log_base_name = tmlog
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.console_file_limit = -1
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.max_timeout = 300000
+18-04-06 12:56:48,811 [main] USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+18-04-06 12:56:48,811 [main] USING com.atomikos.icatch.tm_unique_name = 192.168.10.18.tm
+18-04-06 12:56:48,811 [main] USING java.naming.provider.url = rmi://localhost:1099
+18-04-06 12:56:48,814 [main] USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+18-04-06 12:56:48,903 [main] data-source: refreshed XAResource
+18-04-06 12:56:49,644 [main] Attempt to create a transaction with a timeout that exceeds com.atomikos.icatch.max_timeout - truncating to: 300000
