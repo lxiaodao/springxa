@@ -3,6 +3,11 @@
 
 # Log file
 *.log
+/*.*/logs/
+/*.*/.classpath
+/*.*/.project.*
+/*.*/.springBeans
+
 
 # BlueJ files
 *.ctxt
